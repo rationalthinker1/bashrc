@@ -17,8 +17,8 @@ export VISUAL=vim
 alias ls='ls --color=auto'
  
 ## Use a long listing format ##
-alias ll="ls --color=auto -lahF" # List all, with human readable filesizes
-alias lld="ls --color=auto -lahFtr" # Same as above, but ordered by date
+alias ll="ls --color=auto -lah --group-directories-first" # List all, with human readable filesizes
+alias lld="ls --color=auto -lahFtr --group-directories-first" # Same as above, but ordered by date
  
 ## Show hidden files ##
 alias l.='ls -d .* --color=auto'
