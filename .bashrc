@@ -24,6 +24,7 @@ export VISUAL=vim
 alias ls='ls --color=auto'
  
 ## Use a long listing format ##
+alias l="ls --color=auto -lh --group-directories-first" # List all, with human readable filesizes
 alias ll="ls --color=auto -lah --group-directories-first" # List all, with human readable filesizes
 alias lld="ls --color=auto -lahFtr --group-directories-first" # Same as above, but ordered by date
  
@@ -78,6 +79,9 @@ alias wget='wget -c'
 
 # Prints out your public IP
 alias myip="curl http://ipecho.net/plain; echo"
+
+# Searches up history commands
+alias hgrep="history | grep"
 
 # Extract archives files
 function extract() {
