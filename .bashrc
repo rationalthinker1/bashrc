@@ -110,6 +110,7 @@ function extract() {
 #=======================================================================================
 # Installing, updating or removing applications aliases and functions
 #=======================================================================================
+alias addrepo='sudo add-apt-repository'
 alias install='sudo apt-get install'
 alias remove='sudo apt-get remove'
 alias update='sudo apt-get update'
