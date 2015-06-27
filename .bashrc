@@ -45,10 +45,10 @@ alias r='cd /'
 alias c="clear" # Typing the whole word is annoying
 alias h="cd ~/" # Go home
 
-HISTCONTROL=ignoreboth
-# Expand the history size
-HISTFILESIZE=10000
-HISTSIZE=100
+export HISTSIZE=1000            # bash history will save N commands
+export HISTFILESIZE=${HISTSIZE} # bash will remember N commands
+export HISTCONTROL=ignoreboth   # ingore duplicates and spaces
+export HISTIGNORE='&:ls:ll:la:cd:exit:clear:history'
 
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep --color=auto'
