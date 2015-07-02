@@ -110,10 +110,10 @@ function extract() {
 #=======================================================================================
 # Installing, updating or removing applications aliases and functions
 #=======================================================================================
-alias addrepo='sudo add-apt-repository'
-alias install='sudo apt-get install'
+alias addrepo='sudo add-apt-repository -y'
+alias install='sudo apt-get install -y '
 alias remove='sudo apt-get remove'
-alias update='sudo apt-get update'
+alias update='sudo apt-get update -y'
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 
 #=======================================================================================
@@ -173,6 +173,11 @@ alias areload='sudo service apache2 restart'
 alias he='tail -n 100 -f /var/log/apache2/error.log'
 alias ha='tail -n 100 -f /var/log/apache2/access.log'
 alias hr='tail -n 100 -f /var/log/apache2/rewrite.log'
+
+#=======================================================================================
+# Node Aliases and functions
+#=======================================================================================
+alias npm='sudo npm'
 
 #=======================================================================================
 # Local Aliases and functions
