@@ -18,7 +18,8 @@ fi
 export VISUAL=vim
 
 # Sets the command prompt to have colour
-#export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+#export PS1='$(whoami)@$(hostname):$(pwd) > '
 
 ## Colorize the ls output ##
 alias ls='ls --color=auto'
