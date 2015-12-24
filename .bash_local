@@ -1,6 +1,9 @@
 #Local aliases
 alias portal="cd /opt/lampp/htdocs/ecoenergy"
+alias prn="cd /opt/lampp/htdocs/nationwide"
 alias ecoportal="ssh -p 2222 ecoadmin@50.87.144.195"
+alias eco="ssh raza@159.203.24.118"
+alias nw="ssh raza@159.203.0.209"
 export PATH=/opt/lampp/bin:$PATH
 
 alias lampp_start="sudo /opt/lampp/lampp start"
