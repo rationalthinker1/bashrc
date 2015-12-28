@@ -1,8 +1,8 @@
 #Local aliases
 alias portal="cd /opt/lampp/htdocs/ecoenergy"
-alias ecoportal="ssh -p 2222 ecoadmin@50.87.144.195"
-alias eco="ssh raza@159.203.24.118"
-alias nw="ssh raza@159.203.0.209"
+alias ecoportal="sshrc -p 2222 ecoadmin@50.87.144.195"
+alias eco="sshrc raza@159.203.24.118"
+alias nw="sshrc raza@159.203.0.209"
 export PATH=/opt/lampp/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/.composer/vendor/bin
