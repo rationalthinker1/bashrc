@@ -1,0 +1,27 @@
+#Local aliases
+alias portal="cd /opt/lampp/htdocs/ecoenergy"
+alias ecoportal="ssh -p 2222 ecoadmin@50.87.144.195"
+alias eco="ssh raza@159.203.24.118"
+alias nw="ssh raza@159.203.0.209"
+export PATH=/opt/lampp/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/.composer/vendor/bin
+
+# This is for Intellij 15 IDE
+# https://youtrack.jetbrains.com/issue/IDEA-7886
+export IBUS_ENABLE_SYNC_MODE=1
+
+
+alias lampp_start="sudo /opt/lampp/lampp start"
+alias lampp_stop="sudo /opt/lampp/lampp stop"
+
+alias mysql="mysql -u root -p123"
+
+alias monitor_reset="/usr/local/sbin/update-monitor-position"
+
+alias mount_windows='sudo mount -t "ntfs" -ro "uhelper=udisks2,nodev,nosuid,uid=1000,gid=1000,dmask=0077,fmask=0177" "/dev/sda2" "/media/raza/hdd"'
+
+alias please='eval $(thefuck $(fc -ln -1)); history -r'
+
+alias dedicated='ssh ecoenergyhs@166.62.88.170'
+alias shared='ssh ecoenergyhs@107.180.41.152'
