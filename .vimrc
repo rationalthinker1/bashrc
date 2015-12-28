@@ -433,3 +433,10 @@ map <C-B> :w !php -l %<CR>
 
 nmap <leader>lb :e ~/.bashrc<cr>
 colorscheme monokai
+
+" Move up/down current line
+nmap <C-S-Up> :m -2<CR>
+nmap <C-S-Down> :m +1<CR>
+
+" save on Ctrl + S
+nmap <C-S> :w<CR>

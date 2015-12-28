@@ -122,6 +122,8 @@ alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 #=======================================================================================
 function c { git checkout $@; }
 function b { git branch $@; }
+alias gcam="git commit -a --amend"
+alias gc="git commit -am"
 alias gs="git status"
 alias gd="git diff --ignore-all-space"
 alias dc="git diff --cached"
@@ -129,6 +131,7 @@ alias dv="git diff | vim -"
 alias gl="git log"
 alias gp="git pull"
 alias gpu="git push"
+alias gpuf="git push --force"
 alias greset="git reset --hard HEAD"
 
 #=======================================================================================
