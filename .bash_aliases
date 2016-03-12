@@ -4,7 +4,8 @@ alias ls='ls --color=auto'
 ## Use a long listing format ##
 alias l="ls --color=auto -lh --group-directories-first" # List all, with human readable filesizes
 alias ll="ls --color=auto -lah --group-directories-first" # List all, with human readable filesizes
-alias lld="ls --color=auto -lahFtr --group-directories-first" # Same as above, but ordered by date
+alias llt="ls --color=auto -lahFtr --group-directories-first" # Same as above, but ordered by date
+alias lls="ls --color=auto -lahFSr --group-directories-first" # Same as above, but ordered by size
 
 ## Show hidden files ##
 alias l.='ls -d .* --color=auto'
@@ -104,7 +105,16 @@ alias gl="git log"
 alias gp="git pull"
 alias gpu="git push"
 alias gpuf="git push --force"
-alias greset="git reset --hard HEAD"
+
+git_reset() {
+    COMMIT="HEAD"
+    if [[ "$#" -eq 1 ]];
+    then
+        COMMIT="HEAD~$1"
+    fi
+    git reset --hard "${COMMIT}" 
+}
+alias gre=git_reset
 
 #=======================================================================================
 # Vagrant Aliases and functions

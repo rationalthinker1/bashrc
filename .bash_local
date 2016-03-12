@@ -1,5 +1,6 @@
 #Local aliases
 alias portal="cd /opt/lampp/htdocs/ecoenergy"
+alias prn="cd /opt/lampp/htdocs/nationwide"
 alias ecoportal="sshrc -p 2222 ecoadmin@50.87.144.195"
 alias eco="sshrc raza@159.203.24.118"
 alias nw="sshrc raza@159.203.0.209"
@@ -15,7 +16,7 @@ export IBUS_ENABLE_SYNC_MODE=1
 alias lampp_start="sudo /opt/lampp/lampp start"
 alias lampp_stop="sudo /opt/lampp/lampp stop"
 
-alias mysql="mysql -u root -p123"
+alias mysqlr="mysql -u root -p123"
 
 alias monitor_reset="/usr/local/sbin/update-monitor-position"
 
