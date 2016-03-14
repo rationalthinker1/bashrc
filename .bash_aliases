@@ -156,9 +156,9 @@ alias acon="cd /etc/apache2/sites-available/"
 alias aerr="cd /var/log/apache2/"
 # Restart Apache
 alias areload='sudo service apache2 restart'
-alias he='tail -n 100 -f /var/log/apache2/error.log'
-alias ha='tail -n 100 -f /var/log/apache2/access.log'
-alias hr='tail -n 100 -f /var/log/apache2/rewrite.log'
+alias he='tail -f /var/log/apache2/*error.log'
+alias ha='tail -f /var/log/apache2/*access.log'
+alias hr='tail -f /var/log/apache2/*rewrite.log'
 
 #=======================================================================================
 # Node Aliases and functions
