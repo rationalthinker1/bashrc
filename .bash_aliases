@@ -163,3 +163,9 @@ alias apa='tail -f /var/log/apache2/*access.log'
 # Node Aliases and functions
 #=======================================================================================
 alias npm='sudo npm'
+
+#=======================================================================================
+# Lampp Aliases and functions
+#=======================================================================================
+alias lst='sudo /opt/lampp/lampp start'
+alias lsp='sudo /opt/lampp/lampp stop'
