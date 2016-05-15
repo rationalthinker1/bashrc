@@ -139,7 +139,7 @@ alias pda="php artisan dumpautoload"
 alias cu="composer update"
 alias ci="composer install"
 alias cda="composer dump-autoload -o"
-
+alias pacc="php artisan clear-compiled"
 #=======================================================================================
 # Nginx Aliases and functions
 #=======================================================================================
