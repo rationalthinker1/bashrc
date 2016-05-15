@@ -139,7 +139,7 @@ alias pda="php artisan dumpautoload"
 alias cu="composer update"
 alias ci="composer install"
 alias cda="composer dump-autoload -o"
-
+alias pacc="php artisan clear-compiled"
 #=======================================================================================
 # Nginx Aliases and functions
 #=======================================================================================
@@ -162,7 +162,7 @@ alias apa='tail -f /var/log/apache2/*access.log'
 #=======================================================================================
 # Node Aliases and functions
 #=======================================================================================
-alias npm='sudo npm'
+#alias npm='sudo npm'
 
 #=======================================================================================
 # Lampp Aliases and functions
