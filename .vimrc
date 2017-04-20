@@ -440,3 +440,10 @@ nmap <C-S-Down> :m +1<CR>
 
 " save on Ctrl + S
 nmap <C-S> :w<CR>
+
+
+"insert and remove comments in visual and normal mode
+vmap ,ic :s/^/#/g<CR>:let @/ = ""<CR>
+map  ,ic :s/^/#/g<CR>:let @/ = ""<CR>
+vmap ,rc :s/^#//g<CR>:let @/ = ""<CR>
+map  ,rc :s/^#//g<CR>:let @/ = ""<CR>
