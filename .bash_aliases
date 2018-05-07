@@ -1,3 +1,8 @@
+## Bashrc Related ##
+alias dirbashrc="grep -nT '^#|' ~/.bashrc"
+alias bashrc="vim ~/.bashrc"
+alias rebash='source ~/.bashrc'
+
 ## Colorize the ls output ##
 alias ls='ls --color=auto'
 
@@ -170,3 +175,69 @@ alias apa='tail -f /var/log/apache2/*access.log'
 alias lst='sudo /opt/lampp/lampp start'
 alias lsp='sudo /opt/lampp/lampp stop'
 alias alog='sudo tail -f /opt/lampp/logs/*'
+
+#=======================================================================================
+# Install functions
+#=======================================================================================
+ABSOLUTE_PATH=$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)/`basename "${BASH_SOURCE[0]}"`
+BASE_DIR=$(dirname ${ABSOLUTE_PATH})
+
+CURRENT_USER="$(whoami | awk '{print $1}')"
+export $CURRENT_USER
+
+function install() {
+    for application in "$@"
+    do
+        filename="${application}"
+        ${BASE_DIR}/installers/${filename}.sh
+    done
+}
+export -f install
+
+function gnome-install() {
+    for extension_id in "$@"
+    do
+        ${BASE_DIR}/installers/gnome-extension-installer.sh "${extension_id}"
+    done
+}
+export -f gnome-install
+
+function apt-install() {
+    for application in "$@"
+    do
+        sudo apt-get install -f -y "${application}"
+    done
+}
+export -f apt-install
+
+function apt-update() {
+    sudo apt-get -y update
+}
+export -f apt-update
+
+function add-repo() {
+    for repository in "$@"
+    do
+        sudo add-apt-repository -y "${repository}"
+    done
+}
+export -f add-repo
+
+# simple-install ppa:numix/ppa numix-gtk-theme numix-icon-theme-circle
+function simple-install() {
+    repository=$1
+
+    # Add the repository
+    add-repo "${repository}"
+    shift
+
+    # Update list of available packages
+    apt-update
+
+    for application in "$@"
+    do
+        # Install application
+        apt-install "${application}"
+    done
+}
+export -f simple-install
